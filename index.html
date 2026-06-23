@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO Web App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="app">
+        <!-- LEFT PANEL: Tasks -->
+        <div class="left-panel">
+            <div class="greeting">
+                <h1><i class="fas fa-check-circle"></i> TASK TRACKER</h1>
+            </div>
+            <div></div>
+<div class="search-section">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Search tasks…" />
+                        <button class="clear-search" id="clearSearch" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <span class="search-results-count" id="searchResultsCount"></span>
+                </div>
+            <div class="add-section">
+                <!-- ADVANCED MODE TEXT - Now above the input -->
+                <div class="adv-toggle">
+                    <i class="fas fa-sliders-h"></i> <span>Focus.Complete.Achieve</span>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="taskInput" placeholder="Write a task …" />
+                    <div class="date-picker-wrapper">
+                        <input type="datetime-local" id="taskDateTime" />
+                        <button class="calendar-icon" id="calendarIcon" type="button">
+                            <i class="fas fa-calendar-alt"></i>
+                        </button>
+                        <button class="ok-date-btn" id="okDateBtn" type="button" style="display: none;">OK</button>
+                    </div>
+                    <button class="btn-primary" id="addTaskBtn"><i class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
+
+            <div class="task-section">
+                <div class="task-section-title"><i class="fas fa-list-ul"></i> TASKS</div>
+                
+                <div id="taskListContainer" class="task-list">
+                    <div class="empty-state">
+                        <i class="fas fa-smile-wink"></i>
+                        <span>No tasks yet · add one above</span>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL: Summary -->
+        <div class="right-panel">
+            <h2><i class="fas fa-chart-pie"></i> Summary</h2>
+
+            <div class="summary-stats">
+                <div class="stat-item">
+                    <span class="stat-icon total"><i class="fas fa-tasks"></i></span>
+                    <div>
+                        <span class="stat-label">Total</span>
+                        <span class="stat-value" id="totalTasks">0</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon completed"><i class="fas fa-check-circle"></i></span>
+                    <div>
+                        <span class="stat-label">Completed</span>
+                        <span class="stat-value" id="completedTasks">0</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon pending"><i class="fas fa-clock"></i></span>
+                    <div>
+                        <span class="stat-label">Pending</span>
+                        <span class="stat-value" id="pendingTasks">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-header">
+                    <span>Completion Progress</span>
+                    <span id="completionRate">0%</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+                </div>
+                <div class="progress-details">
+                    <span id="completedCount">0</span> of <span id="totalCount">0</span> tasks completed
+                </div>
+            </div>
+
+            <div class="status-badge" id="statusBadge">
+                <i class="fas fa-info-circle"></i>
+                <span id="statusText">No tasks yet</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
