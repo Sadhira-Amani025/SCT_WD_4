@@ -1,4 +1,4 @@
-/* style.css - dark theme with search at top and mobile optimization */
+/* style.css - dark theme with search at top */
 
 * {
     margin: 0;
@@ -1120,3 +1120,6 @@ body {
     }
     
     .status-badge i {
+        font-size: 0.7rem;
+    }
+}
