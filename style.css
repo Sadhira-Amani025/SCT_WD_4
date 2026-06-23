@@ -26,7 +26,7 @@ body {
 .left-panel {
     flex: 2;
     background: #111827;
-    padding: 1.8rem 2rem 1.5rem;
+    padding: 1.5rem 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     min-height: 0;
@@ -46,13 +46,14 @@ body {
     margin-right: 0.6rem;
 }
 
-/* ===== SEARCH BAR - At the TOP ===== */
+/* ===== SEARCH BAR - At the TOP (FIXED) ===== */
 .search-section {
     display: flex;
     align-items: center;
     gap: 0.6rem;
     flex-shrink: 0;
     margin-bottom: 0.8rem;
+    width: 100%;
 }
 
 .search-wrapper {
@@ -64,6 +65,7 @@ body {
     border: 2px solid #374151;
     border-radius: 50px;
     transition: all 0.3s;
+    width: 100%;
 }
 
 .search-wrapper:focus-within {
@@ -89,6 +91,7 @@ body {
     font-weight: 500;
     outline: none;
     min-width: 100px;
+    width: 100%;
 }
 
 .search-wrapper input[type="text"]::placeholder {
@@ -928,64 +931,6 @@ body {
     
     .status-badge i {
         font-size: 0.8rem;
-    }
-    
-    /* Edit inline on mobile */
-    .edit-inline {
-        flex-wrap: wrap;
-        gap: 0.25rem;
-    }
-    
-    .edit-inline input {
-        padding: 0.25rem 0.5rem;
-        font-size: 0.75rem;
-        flex: 1 1 60px;
-    }
-    
-    .edit-inline input[type="datetime-local"] {
-        flex: 0 1 80px;
-    }
-    
-    .edit-inline .save-edit {
-        padding: 0.2rem 0.6rem;
-        font-size: 0.6rem;
-    }
-    
-    .edit-inline .cancel-edit {
-        font-size: 0.6rem;
-        padding: 0.2rem 0.4rem;
-    }
-    
-    /* Empty state */
-    .empty-state {
-        padding: 1.2rem 0.5rem;
-        font-size: 0.75rem;
-    }
-    
-    .empty-state i {
-        font-size: 1.3rem;
-    }
-    
-    /* No results */
-    .no-search-results {
-        padding: 1.2rem 0.5rem;
-        font-size: 0.75rem;
-    }
-    
-    .no-search-results i {
-        font-size: 1.3rem;
-    }
-    
-    /* Adv toggle */
-    .adv-toggle {
-        font-size: 0.65rem;
-        margin-bottom: 0.3rem;
-    }
-    
-    /* Task section title */
-    .task-section-title {
-        font-size: 0.85rem;
-        margin-bottom: 0.35rem;
     }
 }
 
