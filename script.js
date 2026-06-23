@@ -1,4 +1,4 @@
-// script.js - full to-do logic with search functionality
+// script.js - full to-do logic with date sorting
 
 (function() {
     // ----- STATE -----
@@ -60,6 +60,26 @@
         const escapedQuery = escapeHtml(query);
         const regex = new RegExp(escapedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
         return escapedText.replace(regex, match => `<span class="highlight-match">${match}</span>`);
+    }
+
+    // ----- SORT TASKS BY DATE (NEWEST FIRST) -----
+    function sortTasksByDate(taskArray) {
+        return [...taskArray].sort((a, b) => {
+            // Completed tasks go to the bottom
+            if (a.completed !== b.completed) return a.completed ? 1 : -1;
+            
+            // If both have due dates, sort by date (newest first)
+            if (a.due && b.due) {
+                return new Date(b.due) - new Date(a.due);
+            }
+            
+            // If only one has a due date, put the one with date first
+            if (a.due && !b.due) return -1;
+            if (!a.due && b.due) return 1;
+            
+            // If no dates, sort by creation time (newest first)
+            return b.id - a.id;
+        });
     }
 
     // ----- CALENDAR ICON + OK BUTTON -----
@@ -237,12 +257,8 @@
             return;
         }
 
-        const sorted = [...filteredTasks].sort((a, b) => {
-            if (a.completed !== b.completed) return a.completed ? 1 : -1;
-            const aTime = a.due ? new Date(a.due).getTime() : Infinity;
-            const bTime = b.due ? new Date(b.due).getTime() : Infinity;
-            return aTime - bTime;
-        });
+        // SORT TASKS BY DATE (NEWEST FIRST)
+        const sorted = sortTasksByDate(filteredTasks);
 
         let html = '';
         for (const task of sorted) {
@@ -250,6 +266,7 @@
             const dueDisplay = task.due ? new Date(task.due).toLocaleString(undefined, {
                 month: 'short',
                 day: 'numeric',
+                year: 'numeric',
                 hour: '2-digit',
                 minute: '2-digit'
             }) : null;
