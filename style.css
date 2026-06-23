@@ -1,4 +1,4 @@
-/* style.css - dark theme full screen split layout with mobile optimization */
+/* style.css - dark theme with search at top and mobile optimization */
 
 * {
     margin: 0;
@@ -26,7 +26,7 @@ body {
 .left-panel {
     flex: 2;
     background: #111827;
-    padding: 2.5rem 2.5rem 2rem;
+    padding: 1.8rem 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     min-height: 0;
@@ -34,11 +34,11 @@ body {
 }
 
 .greeting h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #e5e7eb;
     letter-spacing: -0.5px;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
 }
 
 .greeting h1 i {
@@ -46,219 +46,13 @@ body {
     margin-right: 0.6rem;
 }
 
-/* Tagline */
-.tagline {
-    color: #9ca3af;
-    font-size: 0.85rem;
-    font-weight: 400;
-    margin-bottom: 1.2rem;
-    letter-spacing: 0.5px;
-    opacity: 0.8;
-}
-
-.tagline i {
-    color: #818cf8;
-    margin-right: 0.3rem;
-}
-
-.add-section {
-    margin-bottom: 0.8rem;
-    flex-shrink: 0;
-}
-
-/* ADVANCED MODE - Above the input */
-.adv-toggle {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.6rem;
-    color: #9ca3af;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-}
-
-.adv-toggle i {
-    color: #818cf8;
-}
-
-/* ===== INPUT GROUP WITH SPACING ===== */
-.input-group {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.input-group input[type="text"] {
-    flex: 2 1 200px;
-    padding: 0.75rem 1.2rem;
-    border: 2px solid #374151;
-    border-radius: 50px;
-    background: #1f2937;
-    color: #e5e7eb;
-    font-size: 0.95rem;
-    transition: all 0.3s;
-    font-weight: 500;
-}
-
-.input-group input[type="text"]::placeholder {
-    color: #6b7280;
-}
-
-.input-group input[type="text"]:focus {
-    outline: none;
-    border-color: #818cf8;
-    box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.15);
-}
-
-.date-picker-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    background: #1f2937;
-    border: 2px solid #374151;
-    border-radius: 50px;
-    padding: 0.1rem 0.1rem 0.1rem 1rem;
-    transition: all 0.3s;
-    flex: 1 1 200px;
-    min-width: 180px;
-}
-
-.date-picker-wrapper:focus-within {
-    border-color: #818cf8;
-    box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.15);
-}
-
-.date-picker-wrapper input[type="datetime-local"] {
-    border: none;
-    padding: 0.65rem 0.2rem;
-    font-size: 0.85rem;
-    color: #e5e7eb;
-    background: transparent;
-    flex: 1;
-    min-width: 120px;
-}
-
-.date-picker-wrapper input[type="datetime-local"]:focus {
-    outline: none;
-}
-
-.date-picker-wrapper input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-    display: none;
-}
-
-.date-picker-wrapper input[type="datetime-local"]::-webkit-datetime-edit {
-    color: #e5e7eb;
-}
-
-.date-picker-wrapper .calendar-icon {
-    color: #818cf8;
-    font-size: 1.1rem;
-    cursor: pointer;
-    padding: 0.4rem 0.8rem;
-    transition: all 0.2s;
-    background: transparent;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.date-picker-wrapper .calendar-icon:hover {
-    background: rgba(129, 140, 248, 0.15);
-}
-
-.date-picker-wrapper .ok-date-btn {
-    background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
-    border: none;
-    color: white;
-    font-weight: 600;
-    padding: 0.4rem 1.2rem;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    white-space: nowrap;
-}
-
-.date-picker-wrapper .ok-date-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4);
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
-    border: none;
-    color: white;
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    flex-shrink: 0;
-    min-width: 100px;
-    justify-content: center;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(129, 140, 248, 0.4);
-}
-
-.btn-primary:active {
-    transform: scale(0.95);
-}
-
-.task-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    overflow: hidden;
-}
-
-.task-section-title {
-    font-weight: 700;
-    color: #e5e7eb;
-    margin: 0 0 0.6rem 0;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
+/* ===== SEARCH BAR - At the TOP ===== */
+.search-section {
     display: flex;
     align-items: center;
     gap: 0.6rem;
     flex-shrink: 0;
-}
-
-.task-section-title i {
-    color: #818cf8;
-}
-
-.task-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    flex: 1;
-    overflow-y: auto;
-    padding-right: 4px;
-    margin-bottom: 0.5rem;
-}
-
-/* ===== SEARCH BAR - At the BOTTOM of TODO ===== */
-.search-section {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    flex-shrink: 0;
-    padding-top: 0.7rem;
-    border-top: 1px solid #1f2937;
-    margin-top: auto;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
 }
 
 .search-wrapper {
@@ -327,7 +121,7 @@ body {
     color: #9ca3af;
     font-weight: 500;
     white-space: nowrap;
-    min-width: 60px;
+    min-width: 50px;
     text-align: right;
 }
 
@@ -335,12 +129,200 @@ body {
     color: #818cf8;
 }
 
+.add-section {
+    margin-bottom: 0.8rem;
+    flex-shrink: 0;
+}
+
+/* ADVANCED MODE - Above the input */
+.adv-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+    color: #9ca3af;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.adv-toggle i {
+    color: #818cf8;
+}
+
+/* ===== INPUT GROUP WITH SPACING ===== */
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.input-group input[type="text"] {
+    flex: 2 1 200px;
+    padding: 0.65rem 1.2rem;
+    border: 2px solid #374151;
+    border-radius: 50px;
+    background: #1f2937;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.input-group input[type="text"]::placeholder {
+    color: #6b7280;
+}
+
+.input-group input[type="text"]:focus {
+    outline: none;
+    border-color: #818cf8;
+    box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.15);
+}
+
+.date-picker-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: #1f2937;
+    border: 2px solid #374151;
+    border-radius: 50px;
+    padding: 0.1rem 0.1rem 0.1rem 0.8rem;
+    transition: all 0.3s;
+    flex: 1 1 180px;
+    min-width: 160px;
+}
+
+.date-picker-wrapper:focus-within {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.15);
+}
+
+.date-picker-wrapper input[type="datetime-local"] {
+    border: none;
+    padding: 0.55rem 0.2rem;
+    font-size: 0.8rem;
+    color: #e5e7eb;
+    background: transparent;
+    flex: 1;
+    min-width: 100px;
+}
+
+.date-picker-wrapper input[type="datetime-local"]:focus {
+    outline: none;
+}
+
+.date-picker-wrapper input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.date-picker-wrapper input[type="datetime-local"]::-webkit-datetime-edit {
+    color: #e5e7eb;
+}
+
+.date-picker-wrapper .calendar-icon {
+    color: #818cf8;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    transition: all 0.2s;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-picker-wrapper .calendar-icon:hover {
+    background: rgba(129, 140, 248, 0.15);
+}
+
+.date-picker-wrapper .ok-date-btn {
+    background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.date-picker-wrapper .ok-date-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.65rem 1.8rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex-shrink: 0;
+    min-width: 90px;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(129, 140, 248, 0.4);
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+.task-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.task-section-title {
+    font-weight: 700;
+    color: #e5e7eb;
+    margin: 0 0 0.4rem 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+}
+
+.task-section-title i {
+    color: #818cf8;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 4px;
+    margin-bottom: 0;
+}
+
 /* Task items */
 .task-item {
     background: #1f2937;
     border: 2px solid #374151;
-    border-radius: 60px;
-    padding: 0.6rem 1rem 0.6rem 1.5rem;
+    border-radius: 50px;
+    padding: 0.5rem 0.8rem 0.5rem 1.2rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -358,15 +340,15 @@ body {
 .task-info {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    flex: 2 1 150px;
+    gap: 0.6rem;
+    flex: 2 1 130px;
 }
 
 .task-info .task-text {
     font-weight: 600;
     color: #e5e7eb;
     word-break: break-word;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .task-info .task-text.completed {
@@ -377,15 +359,15 @@ body {
 .task-meta {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     flex-wrap: wrap;
 }
 
 .task-due {
     background: #374151;
-    padding: 0.2rem 0.8rem;
+    padding: 0.15rem 0.6rem;
     border-radius: 30px;
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 600;
     color: #818cf8;
     white-space: nowrap;
@@ -394,14 +376,14 @@ body {
 .task-actions {
     display: flex;
     align-items: center;
-    gap: 0.1rem;
+    gap: 0.05rem;
 }
 
 .task-actions button {
     background: transparent;
     border: none;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -409,7 +391,7 @@ body {
     color: #9ca3af;
     cursor: pointer;
     transition: all 0.2s;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 .task-actions button:hover {
@@ -445,17 +427,17 @@ body {
 }
 
 .empty-state {
-    padding: 2.5rem 0.5rem;
+    padding: 2rem 0.5rem;
     text-align: center;
     color: #6b7280;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border: 2px dashed #374151;
     border-radius: 2rem;
     background: rgba(31, 41, 55, 0.4);
 }
 
 .empty-state i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     opacity: 0.3;
     margin-bottom: 0.4rem;
     display: block;
@@ -464,17 +446,17 @@ body {
 
 /* No results message in search */
 .no-search-results {
-    padding: 2rem 0.5rem;
+    padding: 1.5rem 0.5rem;
     text-align: center;
     color: #6b7280;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border: 2px dashed #374151;
     border-radius: 2rem;
     background: rgba(31, 41, 55, 0.4);
 }
 
 .no-search-results i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     opacity: 0.3;
     margin-bottom: 0.4rem;
     display: block;
@@ -494,18 +476,18 @@ body {
 .edit-inline {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    flex: 2 1 150px;
+    gap: 0.3rem;
+    flex: 2 1 130px;
 }
 
 .edit-inline input {
-    padding: 0.4rem 0.8rem;
+    padding: 0.35rem 0.6rem;
     border-radius: 30px;
     border: 2px solid #818cf8;
     background: #1f2937;
     color: #e5e7eb;
-    font-size: 0.85rem;
-    flex: 1 1 100px;
+    font-size: 0.8rem;
+    flex: 1 1 80px;
     font-weight: 500;
 }
 
@@ -515,7 +497,7 @@ body {
 }
 
 .edit-inline input[type="datetime-local"] {
-    flex: 0 1 130px;
+    flex: 0 1 100px;
 }
 
 .edit-inline input[type="datetime-local"]::-webkit-datetime-edit {
@@ -527,9 +509,9 @@ body {
     border: none;
     color: white;
     border-radius: 50px;
-    padding: 0.3rem 1rem;
+    padding: 0.25rem 0.8rem;
     font-weight: 600;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -543,9 +525,9 @@ body {
     background: transparent;
     border: none;
     color: #9ca3af;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     cursor: pointer;
-    padding: 0.3rem 0.6rem;
+    padding: 0.25rem 0.5rem;
     font-weight: 500;
 }
 
@@ -557,17 +539,17 @@ body {
 .right-panel {
     flex: 1;
     background: #111827;
-    padding: 2.5rem 2rem 2rem;
+    padding: 1.8rem 1.5rem 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    min-width: 280px;
+    gap: 1rem;
+    min-width: 250px;
     overflow-y: auto;
     border-left: 1px solid #1f2937;
 }
 
 .right-panel h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #e5e7eb;
 }
@@ -580,16 +562,16 @@ body {
 .summary-stats {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.5rem;
 }
 
 .stat-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 0.8rem 1.2rem;
+    gap: 0.8rem;
+    padding: 0.6rem 1rem;
     background: #1f2937;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     border: 1px solid #374151;
     transition: all 0.3s;
 }
@@ -600,13 +582,13 @@ body {
 }
 
 .stat-icon {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     flex-shrink: 0;
 }
 
@@ -626,7 +608,7 @@ body {
 }
 
 .stat-item .stat-label {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 500;
     color: #9ca3af;
     text-transform: uppercase;
@@ -635,7 +617,7 @@ body {
 }
 
 .stat-item .stat-value {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #e5e7eb;
     line-height: 1.2;
@@ -645,8 +627,8 @@ body {
 /* Progress Section */
 .progress-section {
     background: #1f2937;
-    padding: 1.2rem 1.5rem;
-    border-radius: 1.2rem;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
     border: 1px solid #374151;
 }
 
@@ -654,10 +636,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
     font-weight: 600;
     color: #e5e7eb;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .progress-header span:last-child {
@@ -667,7 +649,7 @@ body {
 
 .progress-bar-container {
     width: 100%;
-    height: 12px;
+    height: 10px;
     background: #374151;
     border-radius: 20px;
     overflow: hidden;
@@ -682,8 +664,8 @@ body {
 }
 
 .progress-details {
-    margin-top: 0.6rem;
-    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
     color: #9ca3af;
     text-align: center;
     font-weight: 500;
@@ -698,23 +680,23 @@ body {
 .status-badge {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    padding: 0.8rem 1.2rem;
-    border-radius: 1rem;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.8rem;
     background: rgba(129, 140, 248, 0.1);
     border: 1px solid rgba(129, 140, 248, 0.2);
     color: #818cf8;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .status-badge i {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -738,14 +720,14 @@ body {
 /* Tablet and smaller screens */
 @media (max-width: 1024px) {
     .left-panel {
-        padding: 2rem;
+        padding: 1.5rem;
     }
     .right-panel {
-        padding: 2rem 1.5rem;
-        min-width: 240px;
+        padding: 1.5rem 1.2rem;
+        min-width: 220px;
     }
     .greeting h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -760,113 +742,34 @@ body {
     
     .left-panel {
         flex: none;
-        height: 60vh;
-        min-height: 400px;
-        padding: 1.2rem;
+        height: 55vh;
+        min-height: 350px;
+        padding: 1rem;
         border-bottom: 1px solid #1f2937;
     }
     
     .right-panel {
         flex: none;
-        min-height: 40vh;
-        padding: 1.2rem;
+        min-height: 45vh;
+        padding: 1rem;
         border-left: none;
         border-top: 1px solid #1f2937;
-        gap: 1rem;
+        gap: 0.8rem;
     }
     
     .greeting h1 {
-        font-size: 1.5rem;
-        margin-bottom: 0.3rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
     }
     
-    .tagline {
-        font-size: 0.75rem;
-        margin-bottom: 0.8rem;
-    }
-    
-    /* Input group - stack vertically on mobile */
-    .input-group {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.6rem;
-    }
-    
-    .input-group input[type="text"] {
-        flex: 1;
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
-    
-    .date-picker-wrapper {
-        flex: 1;
-        min-width: auto;
-        padding: 0.1rem 0.1rem 0.1rem 0.8rem;
-    }
-    
-    .date-picker-wrapper input[type="datetime-local"] {
-        padding: 0.5rem 0.2rem;
-        font-size: 0.8rem;
-        min-width: 80px;
-    }
-    
-    .btn-primary {
-        min-width: auto;
-        padding: 0.6rem 1.5rem;
-        font-size: 0.9rem;
-        justify-content: center;
-    }
-    
-    /* Task list */
-    .task-list {
-        gap: 0.4rem;
-        max-height: none;
-    }
-    
-    .task-item {
-        padding: 0.5rem 0.8rem 0.5rem 1rem;
-        border-radius: 40px;
-        flex-wrap: wrap;
-        gap: 0.3rem;
-    }
-    
-    .task-info {
-        flex: 1 1 100%;
-        gap: 0.5rem;
-    }
-    
-    .task-info .task-text {
-        font-size: 0.85rem;
-    }
-    
-    .task-meta {
-        gap: 0.3rem;
-    }
-    
-    .task-due {
-        font-size: 0.6rem;
-        padding: 0.15rem 0.6rem;
-    }
-    
-    .task-actions {
-        gap: 0.05rem;
-    }
-    
-    .task-actions button {
-        width: 28px;
-        height: 28px;
-        font-size: 0.75rem;
-    }
-    
-    /* Search bar */
+    /* Search bar on mobile */
     .search-section {
-        gap: 0.5rem;
-        padding-top: 0.5rem;
-        margin-bottom: 0.2rem;
+        gap: 0.4rem;
+        margin-bottom: 0.6rem;
     }
     
     .search-wrapper input[type="text"] {
-        padding: 0.5rem 1rem 0.5rem 2.5rem;
+        padding: 0.5rem 0.8rem 0.5rem 2.5rem;
         font-size: 0.85rem;
     }
     
@@ -875,161 +778,43 @@ body {
         font-size: 0.8rem;
     }
     
+    .search-wrapper .clear-search {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.8rem;
+    }
+    
     .search-results-count {
         font-size: 0.65rem;
-        min-width: 40px;
+        min-width: 35px;
     }
     
-    /* Right panel - summary */
-    .right-panel h2 {
-        font-size: 1.2rem;
-    }
-    
-    .summary-stats {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 0.4rem;
-    }
-    
-    .stat-item {
-        flex: 1;
-        min-width: 80px;
-        padding: 0.5rem 0.8rem;
-        gap: 0.6rem;
-    }
-    
-    .stat-icon {
-        width: 32px;
-        height: 32px;
-        font-size: 0.9rem;
-    }
-    
-    .stat-item .stat-value {
-        font-size: 1.3rem;
-    }
-    
-    .stat-item .stat-label {
-        font-size: 0.6rem;
-    }
-    
-    .progress-section {
-        padding: 0.8rem 1rem;
-    }
-    
-    .progress-header {
-        font-size: 0.8rem;
-    }
-    
-    .progress-bar-container {
-        height: 8px;
-    }
-    
-    .progress-details {
-        font-size: 0.7rem;
-    }
-    
-    .status-badge {
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
-    }
-    
-    /* Edit inline on mobile */
-    .edit-inline {
-        flex-wrap: wrap;
-        gap: 0.3rem;
-    }
-    
-    .edit-inline input {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.8rem;
-        flex: 1 1 80px;
-    }
-    
-    .edit-inline input[type="datetime-local"] {
-        flex: 0 1 100px;
-    }
-    
-    .edit-inline .save-edit {
-        padding: 0.25rem 0.8rem;
-        font-size: 0.7rem;
-    }
-    
-    .edit-inline .cancel-edit {
-        font-size: 0.7rem;
-        padding: 0.25rem 0.5rem;
-    }
-    
-    /* Empty state */
-    .empty-state {
-        padding: 1.5rem 0.5rem;
-        font-size: 0.8rem;
-    }
-    
-    .empty-state i {
-        font-size: 1.5rem;
-    }
-    
-    /* No results */
-    .no-search-results {
-        padding: 1.5rem 0.5rem;
-        font-size: 0.8rem;
-    }
-    
-    .no-search-results i {
-        font-size: 1.5rem;
-    }
-    
-    /* Adv toggle */
-    .adv-toggle {
-        font-size: 0.7rem;
-        margin-bottom: 0.4rem;
-    }
-    
-    /* Task section title */
-    .task-section-title {
-        font-size: 0.9rem;
-        margin-bottom: 0.4rem;
-    }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-    .left-panel {
-        padding: 0.8rem;
-        min-height: 350px;
-        height: 55vh;
-    }
-    
-    .right-panel {
-        padding: 0.8rem;
-        min-height: 35vh;
-    }
-    
-    .greeting h1 {
-        font-size: 1.3rem;
-    }
-    
-    .tagline {
-        font-size: 0.7rem;
+    /* Input group - stack vertically on mobile */
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
     }
     
     .input-group input[type="text"] {
-        padding: 0.5rem 0.8rem;
+        flex: 1;
+        padding: 0.5rem 1rem;
         font-size: 0.85rem;
     }
     
     .date-picker-wrapper {
+        flex: 1;
+        min-width: auto;
         padding: 0.1rem 0.1rem 0.1rem 0.6rem;
     }
     
     .date-picker-wrapper input[type="datetime-local"] {
-        padding: 0.4rem 0.1rem;
+        padding: 0.45rem 0.2rem;
         font-size: 0.75rem;
-        min-width: 60px;
+        min-width: 70px;
     }
     
     .date-picker-wrapper .calendar-icon {
-        padding: 0.3rem 0.5rem;
+        padding: 0.25rem 0.5rem;
         font-size: 0.9rem;
     }
     
@@ -1039,38 +824,68 @@ body {
     }
     
     .btn-primary {
+        min-width: auto;
         padding: 0.5rem 1.2rem;
         font-size: 0.85rem;
+        justify-content: center;
     }
     
-    .search-wrapper input[type="text"] {
-        padding: 0.4rem 0.8rem 0.4rem 2.2rem;
-        font-size: 0.8rem;
-    }
-    
-    .search-wrapper .search-icon {
-        left: 0.6rem;
-        font-size: 0.7rem;
+    /* Task list */
+    .task-list {
+        gap: 0.35rem;
     }
     
     .task-item {
         padding: 0.4rem 0.6rem 0.4rem 0.8rem;
-        border-radius: 30px;
+        border-radius: 35px;
+        flex-wrap: wrap;
+        gap: 0.2rem;
+    }
+    
+    .task-info {
+        flex: 1 1 100%;
+        gap: 0.4rem;
     }
     
     .task-info .task-text {
         font-size: 0.8rem;
     }
     
+    .task-meta {
+        gap: 0.3rem;
+    }
+    
+    .task-due {
+        font-size: 0.55rem;
+        padding: 0.1rem 0.5rem;
+    }
+    
+    .task-actions {
+        gap: 0;
+    }
+    
     .task-actions button {
-        width: 24px;
-        height: 24px;
+        width: 26px;
+        height: 26px;
         font-size: 0.7rem;
     }
     
+    /* Right panel - summary */
+    .right-panel h2 {
+        font-size: 1.1rem;
+    }
+    
+    .summary-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+    }
+    
     .stat-item {
+        flex: 1;
+        min-width: 70px;
         padding: 0.4rem 0.6rem;
-        min-width: 60px;
+        gap: 0.5rem;
     }
     
     .stat-icon {
@@ -1080,7 +895,7 @@ body {
     }
     
     .stat-item .stat-value {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     
     .stat-item .stat-label {
@@ -1092,7 +907,8 @@ body {
     }
     
     .progress-header {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
+        margin-bottom: 0.4rem;
     }
     
     .progress-bar-container {
@@ -1101,26 +917,28 @@ body {
     
     .progress-details {
         font-size: 0.65rem;
+        margin-top: 0.3rem;
     }
     
     .status-badge {
         padding: 0.4rem 0.8rem;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         gap: 0.4rem;
     }
     
     .status-badge i {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
-    .search-results-count {
-        font-size: 0.6rem;
-        min-width: 30px;
+    /* Edit inline on mobile */
+    .edit-inline {
+        flex-wrap: wrap;
+        gap: 0.25rem;
     }
     
     .edit-inline input {
-        font-size: 0.75rem;
         padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
         flex: 1 1 60px;
     }
     
@@ -1130,63 +948,113 @@ body {
     
     .edit-inline .save-edit {
         padding: 0.2rem 0.6rem;
-        font-size: 0.65rem;
+        font-size: 0.6rem;
     }
     
     .edit-inline .cancel-edit {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
         padding: 0.2rem 0.4rem;
+    }
+    
+    /* Empty state */
+    .empty-state {
+        padding: 1.2rem 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .empty-state i {
+        font-size: 1.3rem;
+    }
+    
+    /* No results */
+    .no-search-results {
+        padding: 1.2rem 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .no-search-results i {
+        font-size: 1.3rem;
+    }
+    
+    /* Adv toggle */
+    .adv-toggle {
+        font-size: 0.65rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    /* Task section title */
+    .task-section-title {
+        font-size: 0.85rem;
+        margin-bottom: 0.35rem;
     }
 }
 
-/* Landscape mode for phones */
-@media (max-height: 500px) and (orientation: landscape) {
+/* Small phones */
+@media (max-width: 480px) {
     .left-panel {
-        height: 100vh;
-        min-height: auto;
-        padding: 0.8rem;
+        padding: 0.7rem;
+        min-height: 300px;
+        height: 50vh;
     }
     
     .right-panel {
-        min-height: 100vh;
-        padding: 0.8rem;
-        border-top: none;
-        border-left: 1px solid #1f2937;
-    }
-    
-    #app {
-        flex-direction: row;
-        height: 100vh;
+        padding: 0.7rem;
+        min-height: 35vh;
     }
     
     .greeting h1 {
-        font-size: 1.2rem;
-        margin-bottom: 0.2rem;
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
     }
     
-    .tagline {
-        font-size: 0.65rem;
+    .search-section {
+        gap: 0.3rem;
         margin-bottom: 0.4rem;
     }
     
-    .input-group {
-        flex-direction: row;
-        gap: 0.4rem;
+    .search-wrapper input[type="text"] {
+        padding: 0.4rem 0.6rem 0.4rem 2.2rem;
+        font-size: 0.8rem;
+    }
+    
+    .search-wrapper .search-icon {
+        left: 0.6rem;
+        font-size: 0.7rem;
+    }
+    
+    .search-wrapper .clear-search {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.7rem;
+    }
+    
+    .search-results-count {
+        font-size: 0.55rem;
+        min-width: 25px;
     }
     
     .input-group input[type="text"] {
-        padding: 0.4rem 0.8rem;
+        padding: 0.4rem 0.7rem;
         font-size: 0.8rem;
     }
     
     .date-picker-wrapper {
-        min-width: 120px;
+        padding: 0.05rem 0.05rem 0.05rem 0.5rem;
     }
     
     .date-picker-wrapper input[type="datetime-local"] {
-        padding: 0.3rem 0.1rem;
+        padding: 0.35rem 0.1rem;
         font-size: 0.7rem;
-        min-width: 60px;
+        min-width: 50px;
+    }
+    
+    .date-picker-wrapper .calendar-icon {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.8rem;
+    }
+    
+    .date-picker-wrapper .ok-date-btn {
+        padding: 0.25rem 0.6rem;
+        font-size: 0.6rem;
     }
     
     .btn-primary {
@@ -1195,13 +1063,9 @@ body {
         min-width: 60px;
     }
     
-    .task-list {
-        gap: 0.3rem;
-    }
-    
     .task-item {
-        padding: 0.3rem 0.6rem;
-        border-radius: 30px;
+        padding: 0.3rem 0.5rem 0.3rem 0.6rem;
+        border-radius: 25px;
     }
     
     .task-info .task-text {
@@ -1214,18 +1078,9 @@ body {
         font-size: 0.65rem;
     }
     
-    .summary-stats {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
     .stat-item {
-        padding: 0.3rem 0.6rem;
-        min-width: 60px;
-    }
-    
-    .stat-item .stat-value {
-        font-size: 1rem;
+        padding: 0.3rem 0.5rem;
+        min-width: 50px;
     }
     
     .stat-icon {
@@ -1234,21 +1089,34 @@ body {
         font-size: 0.7rem;
     }
     
+    .stat-item .stat-value {
+        font-size: 1rem;
+    }
+    
+    .stat-item .stat-label {
+        font-size: 0.5rem;
+    }
+    
     .progress-section {
         padding: 0.4rem 0.6rem;
     }
     
-    .search-wrapper input[type="text"] {
-        padding: 0.3rem 0.6rem 0.3rem 2rem;
-        font-size: 0.75rem;
+    .progress-header {
+        font-size: 0.65rem;
     }
     
-    .search-wrapper .search-icon {
-        left: 0.5rem;
-        font-size: 0.7rem;
+    .progress-bar-container {
+        height: 5px;
     }
     
-    .right-panel h2 {
-        font-size: 1rem;
+    .progress-details {
+        font-size: 0.6rem;
     }
-}
+    
+    .status-badge {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.65rem;
+        gap: 0.3rem;
+    }
+    
+    .status-badge i {
